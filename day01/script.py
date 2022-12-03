@@ -1,4 +1,4 @@
-f = open('/Users/bas/GIT/aoc2022/input.txt', 'r')
+f = open('/Users/bas/GIT/aoc2022/day01/input.txt', 'r')
 lines = []
 totalVal = 0
 
