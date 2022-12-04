@@ -15,7 +15,6 @@ for j, i in enumerate(ranges):
     set2 = set(range(i[2], i[3] + 1))
 
     if set1.issubset(set2) or set2.issubset(set1):
-        # print(j + 1)
         part1 += 1
 
     intersection = set1.intersection(set2)
