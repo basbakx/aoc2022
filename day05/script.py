@@ -1,6 +1,7 @@
 import re
-f = open('/Users/bas/GIT/aoc2022/day05/input.txt', 'r')
+import copy
 
+f = open('/Users/bas/GIT/aoc2022/day05/input.txt', 'r')
 crates = []
 ins = []
 
@@ -38,11 +39,13 @@ def splitcrates(crates):
 
 
 def doPart1(crate, ins):
-    newcrates = crate
+    newcrates = copy.deepcopy(crate)
     for val in ins:
         for i in range(val[0]):
             newcrates[val[2] - 1].insert(0, newcrates[val[1] - 1][0])
             newcrates[val[1] - 1].pop(0)
+            print('crates')
+            print(crates)
 
     result = ''
     for i in newcrates:
@@ -52,7 +55,7 @@ def doPart1(crate, ins):
 
 
 def doPart2(crate, ins):
-    newcrates = crate
+    newcrates = copy.deepcopy(crate)
     for val in ins:
         for i in range(val[0]):
             newcrates[val[2] - 1].insert(0,
